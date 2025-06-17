@@ -1,1 +1,51 @@
-/* You can add global styles to this file, and also import other style files */
+/* Основные стили */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Angular Material тема (базовые цвета) */
+:root {
+    --primary-color: #3f51b5;
+    --primary-light: #757de8;
+    --primary-dark: #002984;
+    --accent-color: #ff4081;
+    --warn-color: #f44336;
+}
+
+/* Общие стили для Material компонентов */
+.mat-toolbar {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.mat-button, .mat-icon-button {
+    color: inherit;
+}
+
+.mat-card {
+    margin: 8px;
+    transition: box-shadow 0.2s;
+}
+
+.mat-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.mat-grid-list {
+    margin: 16px;
+}
+
+.mat-card-image {
+    height: 200px;
+    object-fit: cover;
+}
