@@ -1,0 +1,9 @@
+.search-container {
+    padding: 16px;
+    margin-bottom: 24px;
+}
+
+.search-container .full-width {
+    width: 100%;
+    max-width: 600px;
+}
