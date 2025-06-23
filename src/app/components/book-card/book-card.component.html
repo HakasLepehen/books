@@ -3,12 +3,6 @@
         <mat-card-title>{{ book.title }}</mat-card-title>
         <mat-card-subtitle>{{ book.author }}</mat-card-subtitle>
     </mat-card-header>
-<!--    <mat-card-content>-->
-<!--        <p>{{ book.description }}</p>-->
-<!--        <p><strong>Genre:</strong> {{ book.genre.join(', ') }}</p>-->
-<!--        <p><strong>Published:</strong> {{ book.publishDate | date }}</p>-->
-<!--        <p><strong>Price:</strong> {{ book.price | currency }}</p>-->
-<!--    </mat-card-content>-->
     <mat-card-actions>
         <button (click)="openDetails(book.id)" mat-button color="primary">Details</button>
     </mat-card-actions>

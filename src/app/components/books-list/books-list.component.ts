@@ -26,4 +26,8 @@ export class BooksListComponent {
   constructor(private bookService: BookService) {
     this.books = this.bookService.getBooks();
   }
+
+  addBook() {
+    this.bookService.openAddBookPopup();
+  }
 }

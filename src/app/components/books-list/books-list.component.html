@@ -1,10 +1,15 @@
-<mat-grid-list cols="3" rowHeight="2:3" gutterSize="16px">
-    @for (book of books(); track book.id) {
-    <mat-grid-tile>
-      <app-book-card [book]="book" />
-    </mat-grid-tile>
-    }
-</mat-grid-list>
-<button mat-fab color="primary" aria-label="Добавить книгу">
-  <mat-icon>add</mat-icon>
+@if (!!books().length) {
+    <mat-grid-list cols="3" rowHeight="200px" gutterSize="8px">
+        @for (book of books(); track book.id) {
+            <mat-grid-tile>
+                <app-book-card [book]="book"/>
+            </mat-grid-tile>
+        }
+    </mat-grid-list>
+}
+@else {
+    <p>Список книг пуст.</p>
+}
+<button (click)="addBook()" mat-fab color="primary" aria-label="Добавить книгу">
+    <mat-icon>add</mat-icon>
 </button>

@@ -1,29 +1,23 @@
 [
   {
-    "id": "1",
+    "id": 1,
     "title": "The Great Gatsby",
     "author": "F. Scott Fitzgerald",
     "description": "A story of wealth, love, and the American Dream in the 1920s.",
-    "price": 12.99,
-    "publishDate": "1925-04-10",
-    "genre": ["Classic", "Fiction"]
+    "price": 12.99
   },
   {
-    "id": "2",
+    "id": 2,
     "title": "To Kill a Mockingbird",
     "author": "Harper Lee",
     "description": "A powerful story of racial injustice and moral growth in the American South.",
-    "price": 10.50,
-    "publishDate": "1960-07-11",
-    "genre": ["Classic", "Fiction"]
+    "price": 10.50
   },
   {
-    "id": "3",
+    "id": 3,
     "title": "To Kill a Mockingbird",
     "author": "Harper Lee",
     "description": "A powerful story of racial injustice and moral growth in the American South.",
-    "price": 10.50,
-    "publishDate": "1960-07-11",
-    "genre": ["Classic", "Fiction"]
+    "price": 10.50
   }
 ]

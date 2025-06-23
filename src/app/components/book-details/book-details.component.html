@@ -1,32 +1,30 @@
 @if (!!book) {
-<div class="book-details-container">
-    <mat-card class="book-card">
-        <button mat-icon-button class="back-button" (click)="goBack()">
-            <mat-icon>arrow_back</mat-icon>
-        </button>
+    <div class="book-details-container">
+        <mat-card class="book-card">
+            <button mat-icon-button class="back-button" (click)="goBack()">
+                <mat-icon>arrow_back</mat-icon>
+            </button>
 
-        <div class="book-content">
+            <div class="book-content">
 
-            <div class="book-info">
-                <h1>{{ book.title }}</h1>
-                <h2>by {{ book.author }}</h2>
+                <div class="book-info">
+                    <h1>{{ book.title }}</h1>
+                    <h2>by {{ book.author }}</h2>
 
-                <mat-divider></mat-divider>
+                    <mat-divider></mat-divider>
 
-                <div class="price-section">
-                    <span class="price">{{ book.price | currency }}</span>
-                    <span class="publish-date">Published: {{ book.publishDate | date }}</span>
+                    <div class="price-section">
+                        <span class="price">{{ book.price | currency }}</span>
+                    </div>
+
+                    <p class="description">{{ book.description }}</p>
                 </div>
-
-                <p class="description">{{ book.description }}</p>
             </div>
-        </div>
-    </mat-card>
-</div>
-}
-@else {
-<div class="not-found">
-    <h2>Book not found</h2>
-    <button mat-raised-button color="primary" (click)="goBack()">Back to catalog</button>
-</div>
+        </mat-card>
+    </div>
+} @else {
+    <div class="not-found">
+        <h2>Книга не найдена</h2>
+        <button mat-raised-button color="primary" (click)="goBack()">В каталог</button>
+    </div>
 }

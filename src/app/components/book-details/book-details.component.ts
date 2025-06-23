@@ -8,6 +8,7 @@ import {CurrencyPipe, DatePipe, NgIf} from "@angular/common";
 import {MatButton, MatIconButton} from "@angular/material/button";
 import {MatIcon} from "@angular/material/icon";
 import {MatDivider} from "@angular/material/divider";
+import {MatSnackBar} from "@angular/material/snack-bar";
 
 @Component({
   selector: 'app-book-details',
@@ -16,8 +17,8 @@ import {MatDivider} from "@angular/material/divider";
     MatIcon,
     MatIconButton,
     MatDivider,
-    DatePipe,
-    CurrencyPipe
+    CurrencyPipe,
+    MatButton
   ],
   standalone: true,
   templateUrl: './book-details.component.html',
@@ -27,12 +28,17 @@ export class BookDetailsComponent {
   private readonly bookService = inject(BookService);
   private route = inject(ActivatedRoute);
   private router = inject(Router);
-  book: IBook | undefined;
+  private snackBar = inject(MatSnackBar);
+  public book: IBook | undefined;
 
   ngOnInit(): void {
-    this.book = this.bookService.getBookById(
-      this.route.snapshot.paramMap.get('id')!
-    );
+    try {
+      this.book = this.bookService.getBookById(this.route.snapshot.paramMap.get('id')!);
+    } catch (error: any) {
+      this.snackBar.open(error.message, 'Close', {
+        duration: 5000
+      });
+    }
   }
 
   goBack() {
