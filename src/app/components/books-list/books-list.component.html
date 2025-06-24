@@ -17,18 +17,18 @@
     </mat-form-field>
 </div>
 
-@if (!!filteredBooks().length) {
+@if (!books().length) {
+    <p>Список книг пуст</p>
+} @else if (!filteredBooks().length && searchQuery.trim().length) {
+    <p>Книг не найдено</p>
+} @else {
     <mat-grid-list cols="3" rowHeight="200px" gutterSize="8px">
-        @for (book of filteredBooks(); track book.id) {
+        @for (book of (searchQuery.length ? filteredBooks() : books()); track book.id) {
             <mat-grid-tile>
                 <app-book-card [book]="book"/>
             </mat-grid-tile>
         }
     </mat-grid-list>
-} @else if (!filteredBooks().length) {
-    <p>Книг не найдено</p>
-} @else {
-    <p>Список книг пуст</p>
 }
 <button (click)="addBook()" mat-fab color="primary" aria-label="Добавить книгу">
     <mat-icon>add</mat-icon>

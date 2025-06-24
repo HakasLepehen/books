@@ -30,7 +30,7 @@ export class BookCardComponent {
   @Input({ required: true }) book!: IBook;
   private readonly router = inject(Router);
 
-  openDetails(id: string) {
+  openDetails(id: number) {
     this.router.navigate([`/books/${id}`])
   }
 }

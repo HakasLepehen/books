@@ -40,6 +40,7 @@ export class BooksListComponent {
   }
 
   onSearch() {
+    // можно сделать с помощью rxjs и каждый раз с задержкой отправлять отдельный запрос на сервер для поиска данных
     if (!this.searchQuery) {
       this.filteredBooks.set(this.books());
       return;
