@@ -1,6 +1,7 @@
 .search-container {
+    display: flex;
+    gap: 24px;
     padding: 16px;
-    margin-bottom: 24px;
 }
 
 .search-container .full-width {

@@ -15,6 +15,9 @@
             </button>
         }
     </mat-form-field>
+    <button (click)="addBook()" matTooltip="Добавить книгу" mat-fab color="primary" aria-label="Добавить книгу">
+        <mat-icon>add</mat-icon>
+    </button>
 </div>
 
 @if (!books().length) {
@@ -30,6 +33,3 @@
         }
     </mat-grid-list>
 }
-<button (click)="addBook()" mat-fab color="primary" aria-label="Добавить книгу">
-    <mat-icon>add</mat-icon>
-</button>

@@ -12,7 +12,6 @@ import {
   MatDialogRef,
   MatDialogTitle
 } from "@angular/material/dialog";
-import {log} from "@angular-devkit/build-angular/src/builders/ssr-dev-server";
 import {BookService} from "../../services/book.service";
 
 @Component({

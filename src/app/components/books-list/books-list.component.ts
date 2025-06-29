@@ -7,6 +7,7 @@ import { MatIcon, MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import {MatFormField, MatInput, MatLabel} from "@angular/material/input";
 import {FormsModule} from "@angular/forms";
+import {MatTooltip} from "@angular/material/tooltip";
 
 @Component({
   selector: 'app-books-list',
@@ -22,6 +23,7 @@ import {FormsModule} from "@angular/forms";
     MatFormField,
     MatLabel,
     MatInput,
+    MatTooltip,
   ],
   templateUrl: './books-list.component.html',
   styleUrl: './books-list.component.css'
