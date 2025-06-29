@@ -1,0 +1,55 @@
+<h2 mat-dialog-title>Простое диалоговое окно</h2>
+<mat-dialog-content>
+    <form [formGroup]="bookForm" class="book-form">
+        <mat-card>
+            <mat-card-content>
+                <div class="row">
+                    <mat-form-field appearance="outline" class="col">
+                        <mat-label>Название</mat-label>
+                        <input matInput formControlName="title" required>
+                        <mat-icon matPrefix>Название</mat-icon>
+                        @if (validateControl['title'].errors?.['required']) {
+                            <mat-error>Наименование обязательно к заполнению</mat-error>
+                        }
+                    </mat-form-field>
+                </div>
+
+                <div class="row">
+                    <mat-form-field appearance="outline" class="col">
+                        <mat-label>Автор</mat-label>
+                        <input matInput formControlName="author" required>
+                        <mat-icon matPrefix>Автор</mat-icon>
+                        @if (validateControl['author'].errors?.['required']) {
+                            <mat-error>
+                                Автор обязателен к заполнению
+                            </mat-error>
+                        }
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="col">
+                        <mat-label>Цена</mat-label>
+                        <input matInput type="number" formControlName="price" min="0" step="0.1" required>
+                        <span matPrefix>$&nbsp;</span>
+                        @if (validateControl['price'].errors?.['required']) {
+                            <mat-error>
+                                Стоимость обязательна к заполнению
+                            </mat-error>
+                        }
+                    </mat-form-field>
+                </div>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Описание</mat-label>
+                    <textarea matInput formControlName="description" rows="4"></textarea>
+                    <mat-icon matPrefix>Описание</mat-icon>
+                </mat-form-field>
+            </mat-card-content>
+        </mat-card>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button type="submit" (click)="onSubmit()" color="primary" [disabled]="bookForm.invalid">
+        <mat-icon>save</mat-icon>Сохранить
+    </button>
+    <button mat-button mat-dialog-close>Закрыть</button>
+</mat-dialog-actions>
