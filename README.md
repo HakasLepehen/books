@@ -17,17 +17,13 @@ This is an Angular-based project for managing books with Material Design interfa
     ```bash
     git clone https://github.com/HakasLepehen/books.git
 
-2. Install dependencies.
-   ```bash
-   npm install
-
-3. Install dependencies.
-   ```bash
-   npm install
-
 4. Open working directory
    ```bash
    cd ./books
+   
+2. Install dependencies.
+   ```bash
+   npm install
 
 5. Start dev-server
    ```bash
